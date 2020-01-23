@@ -20,10 +20,12 @@ class ViewController: UIViewController {
     
     
     let disposeBag = DisposeBag()
+    var namesArray : Variable<[String]> = Variable([])
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        bindSubmitBtn()
     }
     
     func bind() {
@@ -37,6 +39,19 @@ class ViewController: UIViewController {
         }
         .bind(to: helloLbl.rx.text)
         .disposed(by: disposeBag)
+    }
+    
+    func bindSubmitBtn() {
+        submitButton.rx.tap
+            .subscribe(onNext: {
+                if self.nameEntryTextField.text != "" {
+                    self.namesArray.value.append(self.nameEntryTextField.text!)
+                    self.namesLbl.rx.text.onNext(self.namesArray.value.joined(separator: ", "))
+                    self.nameEntryTextField.rx.text.onNext("")
+                    self.helloLbl.rx.text.onNext("Type your name below")
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
 
