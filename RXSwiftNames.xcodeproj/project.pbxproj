@@ -13,6 +13,7 @@
 		44C2401623D9E10300FF6605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C2401423D9E10300FF6605 /* Main.storyboard */; };
 		44C2401823D9E10700FF6605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C2401723D9E10700FF6605 /* Assets.xcassets */; };
 		44C2401B23D9E10700FF6605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C2401923D9E10700FF6605 /* LaunchScreen.storyboard */; };
+		44C2402323D9F9FD00FF6605 /* AddNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C2402223D9F9FC00FF6605 /* AddNameVC.swift */; };
 		DB0EB80571D24BD921CAC736 /* Pods_RXSwiftNames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6EBF11544FE3AD4522C7D6 /* Pods_RXSwiftNames.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		44C2401723D9E10700FF6605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44C2401A23D9E10700FF6605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44C2401C23D9E10700FF6605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44C2402223D9F9FC00FF6605 /* AddNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameVC.swift; sourceTree = "<group>"; };
 		4966CCBA6360A6ED9F93A6E4 /* Pods-RXSwiftNames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftNames.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXSwiftNames/Pods-RXSwiftNames.release.xcconfig"; sourceTree = "<group>"; };
 		EBFE5C2F34670F24873A83D5 /* Pods-RXSwiftNames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftNames.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXSwiftNames/Pods-RXSwiftNames.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 				44C2400E23D9E10300FF6605 /* AppDelegate.swift */,
 				44C2401023D9E10300FF6605 /* SceneDelegate.swift */,
 				44C2401223D9E10300FF6605 /* ViewController.swift */,
+				44C2402223D9F9FC00FF6605 /* AddNameVC.swift */,
 				44C2401423D9E10300FF6605 /* Main.storyboard */,
 				44C2401723D9E10700FF6605 /* Assets.xcassets */,
 				44C2401923D9E10700FF6605 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C2401323D9E10300FF6605 /* ViewController.swift in Sources */,
+				44C2402323D9F9FD00FF6605 /* AddNameVC.swift in Sources */,
 				44C2400F23D9E10300FF6605 /* AppDelegate.swift in Sources */,
 				44C2401123D9E10300FF6605 /* SceneDelegate.swift in Sources */,
 			);

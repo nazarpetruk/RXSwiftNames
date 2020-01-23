@@ -41,7 +41,7 @@
                                             <constraint firstAttribute="width" constant="374" id="2M9-h6-143"/>
                                             <constraint firstAttribute="height" constant="40" id="Zkj-jF-SwL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="SUBMIT">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -63,17 +63,32 @@
                                     <constraint firstAttribute="height" constant="300" id="Puk-b0-JOD"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpv-76-ZLs">
+                                <rect key="frame" x="20" y="598" width="366" height="40"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.98039215690000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HJS-z9-gDK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="+ ADD NAME">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="dpv-76-ZLs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G13-xO-awh"/>
                             <constraint firstItem="Fp5-cF-VrT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="246" id="JiU-zV-Bc8"/>
+                            <constraint firstItem="dpv-76-ZLs" firstAttribute="top" secondItem="Fp5-cF-VrT" secondAttribute="bottom" constant="8" id="Yar-Id-f0L"/>
                             <constraint firstItem="Fp5-cF-VrT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bv6-4f-BQf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fp5-cF-VrT" secondAttribute="trailing" constant="20" id="mZP-wS-grv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dpv-76-ZLs" secondAttribute="trailing" constant="28" id="oPe-Qd-0Oo"/>
                             <constraint firstItem="Fp5-cF-VrT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoA-aG-H2w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addNameBtn" destination="dpv-76-ZLs" id="2Cm-7Q-tz7"/>
                         <outlet property="helloLbl" destination="fPJ-jN-uxS" id="gie-dw-nvu"/>
                         <outlet property="nameEntryTextField" destination="tLM-65-QIh" id="umi-x1-OES"/>
                         <outlet property="namesLbl" destination="miq-nq-bBt" id="pgX-EG-uMm"/>
@@ -82,7 +97,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="142"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
+        </scene>
+        <!--Add NameVC-->
+        <scene sceneID="bYd-ea-WsN">
+            <objects>
+                <viewController storyboardIdentifier="AddNameVC" id="yx1-Rd-dtB" customClass="AddNameVC" customModule="RXSwiftNames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BgZ-O6-Hp5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h1R-Db-Kwi">
+                                <rect key="frame" x="20" y="378" width="374" height="140"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzt-Ev-5im">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Ik4-HJ-3LN"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yci-D9-4i9">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="RY0-ey-LsX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="SUBMIT">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yci-D9-4i9" firstAttribute="leading" secondItem="h1R-Db-Kwi" secondAttribute="leading" id="8c4-sg-SJe"/>
+                                    <constraint firstAttribute="trailing" secondItem="kzt-Ev-5im" secondAttribute="trailing" id="CJp-ta-PaE"/>
+                                    <constraint firstAttribute="trailing" secondItem="yci-D9-4i9" secondAttribute="trailing" id="U5c-c0-Pgs"/>
+                                    <constraint firstItem="kzt-Ev-5im" firstAttribute="leading" secondItem="h1R-Db-Kwi" secondAttribute="leading" id="vRr-RD-rdf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h1R-Db-Kwi" firstAttribute="centerY" secondItem="BgZ-O6-Hp5" secondAttribute="centerY" id="4kY-g4-OCI"/>
+                            <constraint firstItem="jdY-tT-zPY" firstAttribute="trailing" secondItem="h1R-Db-Kwi" secondAttribute="trailing" constant="20" id="NTC-Ya-vco"/>
+                            <constraint firstItem="h1R-Db-Kwi" firstAttribute="centerX" secondItem="BgZ-O6-Hp5" secondAttribute="centerX" id="U3H-F4-dkb"/>
+                            <constraint firstItem="h1R-Db-Kwi" firstAttribute="leading" secondItem="jdY-tT-zPY" secondAttribute="leading" constant="20" id="xAj-Co-56E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jdY-tT-zPY"/>
+                    </view>
+                    <connections>
+                        <outlet property="newNameTxt" destination="kzt-Ev-5im" id="0Ud-0D-whO"/>
+                        <outlet property="submitBtn" destination="yci-D9-4i9" id="VTk-zr-ZBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Oh-Cg-LwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="142"/>
         </scene>
     </scenes>
 </document>

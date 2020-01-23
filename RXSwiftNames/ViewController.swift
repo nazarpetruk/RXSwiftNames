@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameEntryTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var namesLbl: UILabel!
+    @IBOutlet weak var addNameBtn: UIButton!
+    
     
     
     let disposeBag = DisposeBag()
@@ -26,6 +28,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         bind()
         bindSubmitBtn()
+        bindAddNameBtn()
+        
+        namesArray.asObservable().subscribe(onNext: {
+            names in
+            self.namesLbl.text = names.joined(separator: ", ")
+            }).disposed(by: disposeBag)
     }
     
     func bind() {
@@ -52,6 +60,18 @@ class ViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
+    }
+    
+    func bindAddNameBtn() {
+        addNameBtn.rx.tap
+            .throttle(0.5, scheduler: MainScheduler.instance).subscribe(onNext: {
+                guard let addNameVC = self.storyboard?.instantiateViewController(identifier: "AddNameVC") as? AddNameVC else { fatalError("Could not create AddNameVC") }
+                addNameVC.nameSubject.subscribe(onNext: { name in
+                    self.namesArray.value.append(name)
+                    addNameVC.dismiss(animated: true, completion: nil)
+                }).disposed(by: self.disposeBag)
+                self.present(addNameVC, animated: true, completion: nil)
+            })
     }
 }
 
